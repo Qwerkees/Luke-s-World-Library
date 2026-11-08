@@ -43,6 +43,16 @@ Never expose a Supabase secret or service-role key in browser code. The applicat
 
 **Remaining work:** saved-resource UI, persisted learning progress, and a full independent local/CI lint run. Email confirmation and redirect behavior depend on Supabase Auth settings. The private vault UI is implemented, but first account creation should be tested with a real email address.
 
+
+## Supabase Auth URL configuration
+
+In Supabase **Authentication → URL Configuration**, set the Site URL to the protected library URL you intend to use and add these Redirect URLs:
+
+- `https://lukes-world-library-git-foundation-next-fieldvision.vercel.app/**`
+- `http://localhost:3000/**`
+
+The sign-up flow requests the current browser origin as the email-confirmation redirect. Supabase only accepts redirect destinations present in its allow list. Email delivery and confirmation settings remain controlled by the Supabase project.
+
 ## Catalogue and content rights
 
 The catalogue API returns third-party metadata and links to original records. It does not copy or claim rights to full-text works. Verify the rights and access terms on the source record before reuse.
