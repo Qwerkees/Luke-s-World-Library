@@ -1,6 +1,6 @@
 {
   "name": "lukes-world-library",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@supabase/supabase-js": "2.119.0",
     "next": "15.5.29",
     "qrcode": "1.5.4",
     "react": "19.3.1",
