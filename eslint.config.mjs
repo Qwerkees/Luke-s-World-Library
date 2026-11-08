@@ -1,9 +1,16 @@
-import nextVitals from "eslint-config-next/core-web-vitals.js";
-import nextTypescript from "eslint-config-next/typescript.js";
+import nextPlugin from "@next/eslint-plugin-next";
+
+const recommended = nextPlugin.configs.recommended;
+const coreWebVitals = nextPlugin.configs["core-web-vitals"];
 
 export default [
-  nextVitals,
-  nextTypescript,
+  {
+    plugins: { "@next/next": nextPlugin },
+    rules: {
+      ...recommended.rules,
+      ...coreWebVitals.rules,
+    },
+  },
   {
     ignores: [".next/**", "out/**", "build/**", "next-env.d.ts"],
   },
