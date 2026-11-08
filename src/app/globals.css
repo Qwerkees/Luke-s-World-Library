@@ -36,3 +36,6 @@
 .qr-grid p{min-height:70px;color:var(--muted);font-size:12px;line-height:1.7}
 .qr-grid a,.qr-back{font:9px 'DM Mono';letter-spacing:.06em;color:var(--green);text-decoration:none}
 @media(max-width:700px){.qr-page{padding:8vh 6vw}.qr-grid{grid-template-columns:1fr}}
+
+.header-qr{font:9px 'DM Mono';letter-spacing:.08em;color:#234b3d;text-decoration:none;border-bottom:1px solid #78907a;padding:5px 0}
+@media(max-width:760px){header small{display:none}.header-qr{font-size:8px}}
