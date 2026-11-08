@@ -4,7 +4,7 @@ export const QR_DESTINATIONS = {
     filename: "lukes-world-library-qr.svg",
     url:
       process.env.LIBRARY_PUBLIC_URL ||
-      "https://lukes-world-library-git-main-fieldvision.vercel.app",
+      "https://lukes-world-library-git-foundation-next-fieldvision.vercel.app",
   },
   github: {
     label: "LUKE'S WORLD LIBRARY — GITHUB",
