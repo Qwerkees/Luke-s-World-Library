@@ -69,7 +69,7 @@ export default function PrivateLibrary() {
     setBusy(true); setError(""); setMessage("");
     try {
       if (mode==="signup") {
-        const {data,error:e1}=await supabase.auth.signUp({email:email.trim(),password});
+        const {data,error:e1}=await supabase.auth.signUp({email:email.trim(),password,options:{emailRedirectTo:window.location.origin}});
         if (e1) throw e1;
         setMessage(data.session ? "Your private account is ready." : "Check your email to confirm your account, then sign in.");
       } else {
