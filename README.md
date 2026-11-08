@@ -13,7 +13,7 @@ An independently owned, free-first knowledge and learning platform.
 
 ## Technology
 
-- Next.js 15.5.28 (patched maintenance release), React 19.3.1, TypeScript
+- Next.js 15.5.29 (patched maintenance release), React 19.3.1, TypeScript
 - Responsive interface and server-side catalogue API
 - Supabase Postgres with RLS, user-owned records, and versioned migrations
 - QR code generation through a server route
