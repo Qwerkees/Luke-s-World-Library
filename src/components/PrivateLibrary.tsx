@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import type { User } from "@supabase/supabase-js";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
+import SavedResources from "@/components/SavedResources";
 
 type Item = {
   id: string; owner_id: string; title: string; item_type: string;
@@ -161,6 +162,7 @@ export default function PrivateLibrary() {
             <div className="vault-list">{notes.length===0?<p>No research notes yet.</p>:notes.map(note=><div className="vault-row" key={note.id}><div><b>{note.title}</b><small>{new Date(note.created_at).toLocaleDateString()}</small><p>{note.body}</p></div><button disabled={busy} onClick={()=>void removeNote(note)}>DELETE</button></div>)}</div>
           </div>
         </div>
+        <SavedResources />
       </div>}
     {message&&<p className="vault-status" role="status">{message}</p>}{error&&<p className="vault-error" role="alert">{error}</p>}
     <p className="vault-security">Private storage bucket · Owner-only file policies · Owner-scoped database records · Signed file links expire after 60 seconds.</p>
