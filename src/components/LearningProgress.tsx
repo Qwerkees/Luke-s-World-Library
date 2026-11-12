@@ -32,6 +32,7 @@ export default function LearningProgress({moduleKey,itemKey,completed=false,scor
   const [rows,setRows] = useState<ProgressRow[]>([]);
   const [message,setMessage] = useState("");
 
+  // The browser client is guarded before async session and persistence callbacks use it.
   useEffect(() => {
     const client=supabase;
     if (!client) return;
