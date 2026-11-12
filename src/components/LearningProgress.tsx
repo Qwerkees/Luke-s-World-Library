@@ -37,20 +37,20 @@ export default function LearningProgress({moduleKey,itemKey,completed=false,scor
     if (!client) return;
     let alive=true;
     async function load(id:string) {
-      const {data,error}=await client.from("user_learning_progress")
+      const {data,error}=await client!.from("user_learning_progress")
         .select("id,module_key,item_key,status,score,last_activity_at")
         .eq("owner_id",id).order("last_activity_at",{ascending:false}).limit(100);
       if(!alive) return;
       if(error) setMessage("Progress storage is not ready: "+error.message);
       else setRows((data||[]) as ProgressRow[]);
     }
-    client.auth.getSession().then(({data})=>{
+    client!.auth.getSession().then(({data})=>{
       if(!alive) return;
       const id=data.session?.user.id??null;
       setUserId(id);
       if(id) void load(id);
     });
-    const {data:{subscription}}=client.auth.onAuthStateChange((_event,session)=>{
+    const {data:{subscription}}=client!.auth.onAuthStateChange((_event,session)=>{
       const id=session?.user.id??null;
       setUserId(id);
       if(id) void load(id); else setRows([]);
@@ -63,7 +63,7 @@ export default function LearningProgress({moduleKey,itemKey,completed=false,scor
     if(!client||!userId||!itemKey) return;
     let cancelled=false;
     async function persist() {
-      const {data:existing}=await client.from("user_learning_progress")
+      const {data:existing}=await client!.from("user_learning_progress")
         .select("status").eq("owner_id",userId).eq("module_key",moduleKey).eq("item_key",itemKey).maybeSingle();
       if(cancelled) return;
       if(existing?.status==="completed"&&!completed) return;
@@ -75,13 +75,13 @@ export default function LearningProgress({moduleKey,itemKey,completed=false,scor
         completed_at:completed?now:undefined,
         last_activity_at:now,
       };
-      const {error}=await client.from("user_learning_progress")
+      const {error}=await client!.from("user_learning_progress")
         .upsert(payload,{onConflict:"owner_id,module_key,item_key"});
       if(cancelled) return;
       if(error) setMessage("Could not save learning progress: "+error.message);
       else {
         setMessage("Learning progress saved to your account.");
-        const {data}=await client.from("user_learning_progress")
+        const {data}=await client!.from("user_learning_progress")
           .select("id,module_key,item_key,status,score,last_activity_at")
           .eq("owner_id",userId).order("last_activity_at",{ascending:false}).limit(100);
         if(!cancelled) setRows((data||[]) as ProgressRow[]);
