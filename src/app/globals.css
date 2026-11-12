@@ -81,3 +81,38 @@
 .vault-status{color:#cbdca5}.vault-error{color:#ffc4b7}
 .vault-security{font:9px 'DM Mono';letter-spacing:.04em;color:#a9c49d;line-height:1.7;margin-top:20px}
 @media(max-width:760px){.private-library{padding:55px 5vw}.private-heading{flex-direction:column}.vault-workspace{padding:10px}.vault-columns{grid-template-columns:1fr}.vault-row{flex-direction:column}.vault-actions{align-self:flex-start}}
+
+/* Persistent learning record and saved research collections */
+.learning-progress{padding:58px 9vw;background:#e9ece4;border-top:1px solid #cfd7cc}
+.progress-title,.saved-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.progress-title label,.saved-heading label{font:9px 'DM Mono';letter-spacing:.14em;color:#66836c}
+.progress-title h2{font:500 clamp(30px,4vw,42px) 'Playfair Display';margin:10px 0}
+.progress-title p,.saved-heading p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.progress-title>strong,.saved-heading>strong{font:500 30px 'Playfair Display';color:var(--green);white-space:nowrap}
+.progress-title>strong small,.saved-heading>strong small{display:block;font:8px 'DM Mono';letter-spacing:.1em}
+.progress-empty,.progress-message{font-size:11px;color:var(--muted);line-height:1.7}
+.progress-list{margin-top:22px;border-top:1px solid #cfd7cc}
+.progress-row{display:grid;grid-template-columns:150px 1fr auto;align-items:center;gap:15px;padding:13px 0;border-bottom:1px solid #cfd7cc}
+.progress-row span,.progress-row small{font:9px 'DM Mono';color:#66836c;letter-spacing:.04em}
+.progress-row b{font-size:12px;font-weight:500}
+.saved-collections{margin-top:24px;padding:26px;background:#f8f7f1;border:1px solid var(--line);color:var(--ink)}
+.saved-heading{margin-bottom:20px}
+.saved-heading h3{font:500 25px 'Playfair Display';margin:8px 0}
+.saved-collections>p{font-size:11px;color:var(--muted);line-height:1.7}
+.saved-filter-label{display:block;font:9px 'DM Mono';color:#66836c;margin-bottom:7px}
+.saved-collections select{padding:10px 12px;border:1px solid var(--line);background:#fffefa;color:var(--ink);min-width:220px}
+.saved-items{margin-top:18px;border-top:1px solid var(--line)}
+.saved-item{display:flex;justify-content:space-between;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.saved-item small{font:9px 'DM Mono';color:#66836c}
+.saved-item h4{font:500 18px 'Playfair Display';margin:5px 0}
+.saved-item p{font-size:11px;line-height:1.6;color:var(--muted);margin:5px 0}
+.saved-item a{display:inline-block;margin-top:8px;font:9px 'DM Mono';color:var(--green);text-decoration:none}
+.saved-item button{align-self:flex-start;border:1px solid var(--line);background:transparent;padding:8px 10px;font:8px 'DM Mono';color:var(--green);cursor:pointer}
+.saved-error{font-size:11px;color:#a35c4c}
+.collection-picker{display:flex;align-items:center;gap:12px;margin:0 0 12px;flex-wrap:wrap}
+.collection-picker label{font:9px 'DM Mono';letter-spacing:.08em;color:#66836c}
+.collection-picker input{padding:9px 12px;border:1px solid var(--line);background:#fffefa;font:11px 'DM Sans';min-width:220px}
+.search-result-actions{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.search-result-actions button{border:1px solid var(--line);background:transparent;padding:8px 10px;font:8px 'DM Mono';color:var(--green);cursor:pointer;white-space:nowrap}
+.search-result-actions button:disabled{opacity:.5;cursor:default}
+@media(max-width:760px){.learning-progress{padding:48px 5vw}.progress-row{grid-template-columns:1fr;gap:5px}.saved-item{flex-direction:column}.saved-heading,.progress-title{align-items:flex-start}.collection-picker{align-items:flex-start;flex-direction:column}.collection-picker input{width:100%}.search-result-actions{flex-wrap:wrap}}
