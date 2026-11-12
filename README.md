@@ -10,7 +10,8 @@ An independently owned, free-first knowledge and learning platform.
 - **Teach Me:** interactive quiz sessions with instant explanations.
 - **Global Catalogue Search:** live metadata search against Open Library and the Library of Congress, with source status and original-record links.
 - **QR Download Center:** separate downloadable SVG QR codes for the hosted library and GitHub repository at `/qr`.
-- **Private Collection:** Supabase email/password authentication, owner-scoped private file uploads, signed downloads, deletion, and a private research notebook.
+- **Private Collection:** Supabase email/password authentication, owner-scoped private file uploads, signed downloads, deletion, a private research notebook, and personal saved catalogue collections.
+- **Learning Record:** saves World Explorer, Time Machine, Knowledge Map, and Teach Me activity to the signed-in user's account, including completed quiz items and scores.
 
 ## Technology
 
@@ -37,11 +38,11 @@ An independently owned, free-first knowledge and learning platform.
 
 The `supabase/migrations` directory contains the reproducible schema, access-hardening, and storage migrations. The database has seven library divisions and six public-schema tables. Row-level security is enabled on all six tables.
 
-Public catalogue data is read-only to API roles. User profiles, private item metadata, saved resources, and research notes require authentication and owner-matching policies. The `lukes-private-library` Storage bucket is private, limits files to 25 MB, and restricts object paths to the authenticated user's ID.
+Public catalogue data is read-only to API roles. User profiles, private item metadata, saved resources, and research notes require authentication and owner-matching policies. The `lukes-private-library` Storage bucket is private, limits files to 25 MB, and restricts object paths to the authenticated user's ID. `saved_external_resources` and `user_learning_progress` are owner-scoped tables with RLS and authenticated-only grants.
 
 Never expose a Supabase secret or service-role key in browser code. The application uses only the publishable key.
 
-**Remaining work:** saved-resource UI, persisted learning progress, and a full independent local/CI lint run. Email confirmation and redirect behavior depend on Supabase Auth settings. The private vault UI is implemented, but first account creation should be tested with a real email address.
+**Remaining work:** verify account-specific end-to-end save/progress flows, confirm the latest Vercel preview build, and complete a full independent local/CI lint run. Email confirmation and redirect behavior depend on Supabase Auth settings. The private vault UI is implemented, but first account creation should be tested with a real email address.
 
 
 ## Supabase Auth URL configuration
