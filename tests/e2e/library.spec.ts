@@ -68,3 +68,14 @@ test("QR page exposes separate application and source-code QR downloads", async 
   await expect(page.getByRole("link", { name: /DOWNLOAD LIBRARY QR/i })).toHaveAttribute("href", "/api/qr?target=library");
   await expect(page.getByRole("link", { name: /DOWNLOAD GITHUB QR/i })).toHaveAttribute("href", "/api/qr?target=github");
 });
+
+test("Library Navigator routes to the six main destinations", async ({ page }) => {
+  await page.goto("/");
+  const navigator = page.getByRole("navigation", { name: "Library destinations" });
+  await expect(navigator.getByRole("link", { name: /Browse departments/i })).toHaveAttribute("href", "#departments");
+  await expect(navigator.getByRole("link", { name: /Explore the world/i })).toHaveAttribute("href", "#continents");
+  await expect(navigator.getByRole("link", { name: /Search the catalogue/i })).toHaveAttribute("href", "#library-search");
+  await expect(navigator.getByRole("link", { name: /Open research vault/i })).toHaveAttribute("href", "#research");
+  await expect(navigator.getByRole("link", { name: /Learn and practice/i })).toHaveAttribute("href", "#learning-studio");
+  await expect(navigator.getByRole("link", { name: /My library and progress/i })).toHaveAttribute("href", "#my-library");
+});
