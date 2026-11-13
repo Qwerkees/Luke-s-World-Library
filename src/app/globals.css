@@ -247,3 +247,33 @@ header{background:#fff}
   .hero{background:linear-gradient(155deg,#ffe0b8,#e8f8d5 58%,#dff7ff)}
   .navigator-grid a{min-height:125px}
 }
+
+/* FINAL LIGHT-MODE OVERRIDE — keep every library surface bright */
+html,body,main{background:#fffef9!important;color:#263b43!important;color-scheme:light}
+body{background:#fffef9!important}
+header,.library-nav,.work,.continent-hall,.library-search,.qr-page,.vault-auth,.vault-card,.panel,.saved-collections{background:#fffef9!important;color:#263b43!important}
+.hero{background:linear-gradient(110deg,#ffb45b 0%,#ffe18a 32%,#c9f27b 66%,#b9efff 100%)!important;color:#243b43!important}
+.hero h1,.hero p,.hero footer,.hero label{color:#243b43!important}
+.hero em{color:#e85d16!important}
+.navigator-hub,.discipline-hall{background:linear-gradient(120deg,#fff0b8 0%,#e6ffc4 48%,#d9f5ff 100%)!important}
+.collections,.learning-progress{background:linear-gradient(115deg,#f0ffc9 0%,#dff8f6 55%,#fff0d7 100%)!important}
+.private-library{background:linear-gradient(115deg,#dff7ff 0%,#e9ffc9 50%,#ffe8ca 100%)!important;color:#263b43!important}
+.discipline-card,.navigator-grid a,.continent-grid article{box-shadow:0 4px 14px #526b7610!important;border:1px solid #d5e5d6!important}
+.discipline-card.blue,.navigator-grid a:nth-child(6n+2){background:#dff5ff!important}
+.discipline-card.mint,.navigator-grid a:nth-child(6n+1){background:#e8ffc9!important}
+.discipline-card.peach,.navigator-grid a:nth-child(6n+3){background:#ffe4c7!important}
+.discipline-card.lavender,.navigator-grid a:nth-child(6n+4){background:#eee7ff!important}
+.discipline-card.yellow,.navigator-grid a:nth-child(6n+5){background:#fff4bd!important}
+.discipline-card.rose{background:#ffe4e4!important}
+.discipline-card.aqua,.navigator-grid a:nth-child(6n){background:#d8fff2!important}
+.discipline-card.lilac{background:#f5e4ff!important}
+.globe,.detail,.quiz{background:#effbdc!important}
+.timeline button,.nodes button,.answers button{background:#fff!important;color:#263b43!important}
+.timeline button.chosen,.nodes button.chosen,.answers button.right{background:#e8ffc9!important}
+.search-form,.search-result,.vault-row,.saved-item{background:#fff!important}
+.search-form button,.vault-primary,.next{background:#f47721!important;color:#fff!important}
+.brand,.brand b,.library-nav a,.navigator-grid b,.discipline-card h3,.continent-grid h3,.work h2,.collections h2,.progress-title h2,.saved-heading h3{color:#263b43!important}
+header,.library-nav{border-color:#e6eadc!important}
+.orb{border-color:#f47721!important;box-shadow:0 0 0 28px #b6ed3230,0 0 0 56px #12a99a18!important}
+.orb span{background:radial-gradient(circle at 35% 30%,#fff4a8,#b6ed32 48%,#168eae 100%)!important;color:#263b43!important}
+@media(prefers-color-scheme:dark){html,body,main{background:#fffef9!important;color:#263b43!important;color-scheme:light}body{background:#fffef9!important}}
