@@ -116,3 +116,30 @@
 .search-result-actions button{border:1px solid var(--line);background:transparent;padding:8px 10px;font:8px 'DM Mono';color:var(--green);cursor:pointer;white-space:nowrap}
 .search-result-actions button:disabled{opacity:.5;cursor:default}
 @media(max-width:760px){.learning-progress{padding:48px 5vw}.progress-row{grid-template-columns:1fr;gap:5px}.saved-item{flex-direction:column}.saved-heading,.progress-title{align-items:flex-start}.collection-picker{align-items:flex-start;flex-direction:column}.collection-picker input{width:100%}.search-result-actions{flex-wrap:wrap}}
+
+/* Bright library navigation and discipline atlas */
+:root{--green:#4f956f;--ocean:#267d9b;--teal:#42a9a0;--copper:#c77b4c;--paper:#fbfaf5}
+.library-nav{height:auto;min-height:48px;padding:0 6vw;display:flex;align-items:center;justify-content:center;gap:clamp(18px,4vw,54px);background:#fffefa;border-bottom:1px solid #e6e2d7}
+.library-nav a{font:9px 'DM Mono';letter-spacing:.1em;color:#367b70;text-decoration:none;padding:16px 0}
+.library-nav a:hover{color:#bd754a}
+.discipline-hall{padding:78px 9vw;background:linear-gradient(145deg,#fff9eb,#eff8f4 52%,#f1f5ff)}
+.hall-intro{max-width:670px;margin-bottom:32px}
+.hall-intro>label,.continent-hall>label{font:10px 'DM Mono';letter-spacing:.16em;color:#388f82}
+.hall-intro h2,.continent-hall h2{font:500 clamp(36px,5vw,58px) 'Playfair Display';margin:12px 0}
+.hall-intro h2 em,.continent-hall h2 em{color:#c77b4c}
+.hall-intro p,.continent-hall>p{max-width:610px;color:#61766d;font-size:13px;line-height:1.8}
+.discipline-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.discipline-card{min-height:230px;padding:23px 20px;border:1px solid #e4e3d8;border-radius:4px;display:flex;flex-direction:column;align-items:flex-start}
+.discipline-card small,.continent-grid small{font:9px 'DM Mono';letter-spacing:.1em;color:#648477}
+.discipline-card h3{font:500 22px 'Playfair Display';line-height:1.15;margin:17px 0 8px;color:#294b4b}
+.discipline-card p{font-size:11px;line-height:1.65;color:#61736d;margin:0 0 18px}
+.discipline-card a{margin-top:auto;font:8px 'DM Mono';letter-spacing:.08em;color:#327f77;text-decoration:none}
+.discipline-card.blue{background:#e6f4f8}.discipline-card.mint{background:#e9f5e9}.discipline-card.peach{background:#fff0e3}.discipline-card.lavender{background:#f0edfb}.discipline-card.yellow{background:#fff7d9}.discipline-card.rose{background:#fbeaec}.discipline-card.aqua{background:#e2f5f2}.discipline-card.lilac{background:#f6eafa}
+.taxonomy-note{font:10px 'DM Mono';line-height:1.8;color:#6e8177;margin-top:24px}
+.continent-hall{padding:75px 9vw;background:#fffefa}
+.continent-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:28px}
+.continent-grid article{min-height:145px;padding:16px 12px;border:1px solid #e5e4da;background:linear-gradient(160deg,#f0f8f5,#fff7e9)}
+.continent-grid h3{font:500 18px 'Playfair Display';color:#315d59;margin:17px 0 10px}
+.continent-grid span{font:7px 'DM Mono';line-height:1.5;color:#779087}
+@media(max-width:1000px){.discipline-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.continent-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:600px){.library-nav{justify-content:flex-start;overflow:auto;gap:22px;padding:0 5vw}.library-nav a{white-space:nowrap}.discipline-hall,.continent-hall{padding:55px 5vw}.discipline-grid{grid-template-columns:1fr}.continent-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
