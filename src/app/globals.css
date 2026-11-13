@@ -143,3 +143,21 @@
 .continent-grid span{font:7px 'DM Mono';line-height:1.5;color:#779087}
 @media(max-width:1000px){.discipline-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.continent-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:600px){.library-nav{justify-content:flex-start;overflow:auto;gap:22px;padding:0 5vw}.library-nav a{white-space:nowrap}.discipline-hall,.continent-hall{padding:55px 5vw}.discipline-grid{grid-template-columns:1fr}.continent-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Library Navigator: clear destinations and orientation */
+.navigator-hub{padding:58px 9vw 34px;background:linear-gradient(135deg,#fff8e8 0%,#eef8f3 55%,#eef5fb 100%);border-top:1px solid #e8e3d7;border-bottom:1px solid #e2e7dd}
+.navigator-copy{max-width:690px;margin-bottom:26px}
+.navigator-copy>label{font:10px 'DM Mono';letter-spacing:.16em;color:#388f82}
+.navigator-copy h2{font:500 clamp(32px,4.5vw,48px) 'Playfair Display';margin:12px 0;color:#294b4b}
+.navigator-copy h2 em{color:#c77b4c}
+.navigator-copy p{max-width:580px;color:#61766d;font-size:13px;line-height:1.8}
+.navigator-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.navigator-grid a{min-height:130px;padding:18px 20px;display:flex;flex-direction:column;gap:9px;text-decoration:none;border:1px solid #e1e5dc;background:#fffefa;border-radius:5px;transition:transform .15s ease,border-color .15s ease}
+.navigator-grid a:hover{transform:translateY(-2px);border-color:#8db9a4}
+.navigator-grid small,.navigator-foot{font:9px 'DM Mono';letter-spacing:.09em;color:#66877a}
+.navigator-grid b{font:500 19px 'Playfair Display';color:#294b4b}
+.navigator-grid span{font-size:11px;line-height:1.6;color:#687970}
+.navigator-foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:22px;padding-top:16px;border-top:1px solid #dce4da}
+.navigator-foot a{color:#367b70;text-decoration:none}
+@media(max-width:760px){.navigator-hub{padding:48px 5vw 28px}.navigator-grid{grid-template-columns:1fr 1fr}.navigator-grid a{min-height:120px;padding:15px}}
+@media(max-width:430px){.navigator-grid{grid-template-columns:1fr}}
