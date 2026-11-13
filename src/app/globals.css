@@ -277,3 +277,137 @@ header,.library-nav{border-color:#e6eadc!important}
 .orb{border-color:#f47721!important;box-shadow:0 0 0 28px #b6ed3230,0 0 0 56px #12a99a18!important}
 .orb span{background:radial-gradient(circle at 35% 30%,#fff4a8,#b6ed32 48%,#168eae 100%)!important;color:#263b43!important}
 @media(prefers-color-scheme:dark){html,body,main{background:#fffef9!important;color:#263b43!important;color-scheme:light}body{background:#fffef9!important}}
+
+/* Cohesive visual identity: Modern Discovery */
+:root {
+  color-scheme: light;
+  --ink: #23324A;
+  --muted: #65748A;
+  --paper: #FFF9EF;
+  --white: #FFFFFF;
+  --blue: #3155D9;
+  --blue-soft: #E8EEFF;
+  --orange: #FF6B35;
+  --orange-soft: #FFF0E8;
+  --yellow: #FFD84D;
+  --yellow-soft: #FFF7D6;
+  --lime: #B8E85A;
+  --lime-soft: #F0F9D9;
+  --teal: #35B8B0;
+  --line: #E7E2D8;
+}
+html, body, main { background: var(--paper) !important; color: var(--ink) !important; color-scheme: light !important; }
+body { font-family: 'DM Sans', sans-serif; }
+header { background: var(--white) !important; border-bottom: 1px solid var(--line); color: var(--ink); }
+.brand, .brand b { color: var(--blue) !important; }
+.brand i { background: var(--orange); color: white; border: 0; }
+.library-nav { background: var(--white) !important; border-bottom: 1px solid var(--line); }
+.library-nav a { color: var(--blue) !important; }
+.library-nav a:hover, .navigator-foot a:hover { color: var(--orange) !important; }
+.hero {
+  background: linear-gradient(115deg, #FFE0C7 0%, #FFF0B8 42%, #E2F3FF 100%) !important;
+  color: var(--ink) !important;
+}
+.hero label, .hero footer { color: #52627A !important; }
+.hero h1 { color: var(--ink) !important; }
+.hero em, .hall-intro h2 em, .continent-hall h2 em,
+.navigator-copy h2 em, .private-heading h2 em { color: var(--orange) !important; }
+.hero p { color: #52627A !important; }
+.orb { border-color: #FF9A68 !important; box-shadow: 0 0 0 28px #FFD84D30, 0 0 0 56px #35B8B018 !important; }
+.orb span { background: radial-gradient(circle at 35% 30%, #FFF2A6, var(--yellow) 45%, var(--orange)) !important; color: var(--ink) !important; }
+.navigator-hub, .discipline-hall {
+  background: linear-gradient(120deg, #FFF5D9 0%, #F0F8DE 52%, #E7F3FF 100%) !important;
+}
+.navigator-copy h2, .hall-intro h2, .continent-hall h2 { color: var(--ink) !important; }
+.navigator-copy > label, .hall-intro > label, .continent-hall > label { color: var(--blue) !important; }
+.navigator-grid a {
+  background: var(--white) !important; border: 1px solid var(--line) !important;
+  border-radius: 12px; box-shadow: 0 5px 18px #23324A0D;
+}
+.navigator-grid a:nth-child(6n+1) { background: var(--lime-soft) !important; }
+.navigator-grid a:nth-child(6n+2) { background: var(--blue-soft) !important; }
+.navigator-grid a:nth-child(6n+3) { background: var(--orange-soft) !important; }
+.navigator-grid a:nth-child(6n+4) { background: #F1EAFF !important; }
+.navigator-grid a:nth-child(6n+5) { background: var(--yellow-soft) !important; }
+.navigator-grid a:nth-child(6n) { background: #E2F8F3 !important; }
+.navigator-grid b, .discipline-card h3, .continent-grid h3 { color: var(--ink) !important; }
+.navigator-grid a:hover { border-color: var(--orange) !important; }
+.navigator-grid small, .navigator-grid span, .navigator-foot { color: var(--muted) !important; }
+.work, .continent-hall, .library-search { background: var(--paper) !important; }
+.work > label, .collections > label, .panel > label, .panel label,
+.search-heading label { color: var(--blue) !important; }
+.work h2, .collections h2, .progress-title h2 { color: var(--ink) !important; }
+.work nav { border-color: var(--line); }
+.work nav button { color: var(--muted); }
+.work nav .active { color: var(--blue) !important; }
+.panel, .vault-auth, .vault-card, .saved-collections {
+  background: var(--white) !important; border: 1px solid var(--line) !important;
+  border-radius: 12px; box-shadow: 0 8px 24px #23324A0A;
+}
+.panel h3, .panel h4, .saved-heading h3 { color: var(--ink); }
+.panel em, .collections em { color: var(--orange) !important; }
+.panel p, .search-heading p { color: var(--muted); }
+.two select, .vault-auth input, .note-form input, .note-form textarea,
+.saved-collections select, .collection-picker input, .search-form {
+  background: var(--white) !important; border: 1px solid #D7DEEA !important; color: var(--ink) !important;
+}
+.globe { background: linear-gradient(135deg, #E6F3FF, #EFF8D9) !important; border-radius: 12px; }
+.earth { background: radial-gradient(circle at 35% 30%, #B8E85A, #35B8B0 42%, #3155D9 100%) !important; }
+.timeline button, .nodes button, .answers button {
+  background: var(--white) !important; border: 1px solid var(--line) !important;
+  border-radius: 8px; color: var(--ink) !important;
+}
+.timeline button.chosen, .nodes button.chosen { background: var(--blue-soft) !important; border-color: var(--blue) !important; color: var(--blue) !important; }
+.detail, .quiz { background: var(--yellow-soft) !important; border-left: 3px solid var(--yellow) !important; border-radius: 8px; }
+.answers button.right { background: var(--lime-soft) !important; border-color: #83B83D !important; }
+.answers button.wrong { background: var(--orange-soft) !important; border-color: var(--orange) !important; }
+.next, .search-form button, .vault-primary {
+  background: var(--blue) !important; color: white !important; border: 0; border-radius: 7px;
+}
+.next:hover, .search-form button:hover, .vault-primary:hover { background: var(--orange) !important; }
+.collections, .learning-progress {
+  background: linear-gradient(115deg, #F0F8DE 0%, #E7F4FF 58%, #FFF0E2 100%) !important;
+}
+.collection-grid div, .progress-list, .progress-row { border-color: #D8E3D8 !important; }
+.collection-grid small, .progress-row span, .progress-row small { color: var(--blue) !important; }
+.private-library {
+  background: linear-gradient(115deg, #E7F4FF 0%, #F0F8DE 55%, #FFF0E2 100%) !important;
+  color: var(--ink) !important;
+}
+.private-heading label, .vault-card h3 { color: var(--blue) !important; }
+.vault-workspace { background: #F1F5EB !important; border-radius: 12px; }
+.vault-primary { background: var(--orange) !important; }
+.vault-status { color: #287F73 !important; }
+.discipline-card {
+  border: 1px solid #FFFFFF !important; border-radius: 12px;
+  box-shadow: 0 5px 18px #23324A0D;
+}
+.discipline-card.blue { background: #E4EDFF !important; }
+.discipline-card.mint { background: #EAF7D8 !important; }
+.discipline-card.peach { background: #FFE8D8 !important; }
+.discipline-card.lavender { background: #F0EAFF !important; }
+.discipline-card.yellow { background: #FFF5C9 !important; }
+.discipline-card.rose { background: #FFE7E7 !important; }
+.discipline-card.aqua { background: #DFF6F0 !important; }
+.discipline-card.lilac { background: #F6E9FF !important; }
+.discipline-card small, .continent-grid small { color: var(--blue) !important; }
+.discipline-card a, .search-result a, .saved-item a { color: var(--blue) !important; }
+.continent-grid article { background: #FFFFFF !important; border: 1px solid var(--line); border-radius: 10px; }
+.continent-grid article:nth-child(3n+1) { background: var(--blue-soft) !important; }
+.continent-grid article:nth-child(3n+2) { background: var(--lime-soft) !important; }
+.continent-grid article:nth-child(3n) { background: var(--orange-soft) !important; }
+.search-result, .saved-item, .vault-row { border-color: var(--line) !important; }
+.search-result small, .source-online { color: #287F73 !important; }
+.search-result-actions button, .vault-row button, .vault-actions button, .saved-item button {
+  border: 1px solid #D7DEEA; border-radius: 6px; background: white; color: var(--blue);
+}
+.foot { background: var(--white); color: var(--muted); border-top: 1px solid var(--line); }
+.qr-page { background: var(--paper) !important; }
+.qr-grid article { background: var(--white) !important; border: 1px solid var(--line); border-radius: 12px; }
+.qr-page h1 em { color: var(--orange) !important; }
+@media (prefers-color-scheme: dark) {
+  html, body, main { color-scheme: light !important; background: var(--paper) !important; color: var(--ink) !important; }
+}
+@media (max-width: 760px) {
+  .hero { background: linear-gradient(155deg, #FFE0C7, #FFF0B8 55%, #E2F3FF) !important; }
+}
