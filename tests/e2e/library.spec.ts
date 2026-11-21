@@ -22,7 +22,7 @@ test("Time Machine and Knowledge Map interactions work", async ({ page }) => {
   await page.getByRole("button", { name: /Knowledge Map/i }).click();
   await expect(page.getByRole("heading", { name: /Every idea has a history/i })).toBeVisible();
   await page.getByRole("button", { name: /Engineering/i }).last().click();
-  await expect(page.getByRole("heading", { name: "Engineering" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Engineering", exact: true })).toBeVisible();
 });
 
 test("Teach Me gives feedback after an answer", async ({ page }) => {
